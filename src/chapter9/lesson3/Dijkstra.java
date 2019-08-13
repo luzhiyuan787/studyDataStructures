@@ -32,7 +32,7 @@ public class Dijkstra<Weight extends Number & Comparable> {
         // 使用索引堆记录当前找到的到达每个顶点的最短距离
         IndexMinHeap<Weight> ipq = new IndexMinHeap<Weight>(G.V());
 
-        // 对于其实点s进行初始化
+        // 对于起始点s进行初始化
         distTo[s] = 0.0;
         from[s] = new Edge<Weight>(s, s, (Weight)(Number)(0.0));
         ipq.insert(s, (Weight)distTo[s] );
